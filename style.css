@@ -1,11 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+:root{
+    --transition: all 0.7s ease;;
+    --yellow: #f9d342;
+    --dark: #292826;
+}
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
 }
-html, body {
+html {
     scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
+}
+body {
+    line-height: 1.6;
 }
 .container {
     max-width: 90%;
@@ -43,9 +52,10 @@ a {
 .head img {
     margin-top: 10px;
 }
+
 header {
-    background: #cc8c18;
-    /*padding: 15px 0 15px 0;*/
+    background-color:#cc8c18;
+    padding: 15px 0 15px 0;
     color: whitesmoke;
 }
 .navbar {
@@ -60,7 +70,7 @@ header {
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    transition: 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     background: white;
 }
 .nav-menu {
@@ -73,7 +83,7 @@ header ul {
 }
 header li {
     margin-right: 30px;
-    list-style: none;
+    /*list-style: none;*/
 }
 header ul li a {
     font-size: 15px;
@@ -81,6 +91,7 @@ header ul li a {
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 500;
+    transition: 0.5s;
 }
 header ul li a:hover {
     color: #000;
@@ -90,8 +101,8 @@ header .head_contact {
 }
 header .head_contact i {
     position: absolute;
-    top: -40px;
-    left: -60px;
+    top: -29px;
+    left: -70%;
     width: 80px;
     height: 80px;
     line-height: 80px;
@@ -101,10 +112,16 @@ header .head_contact i {
     border-radius: 50%;
     transform: rotate(-45deg);
     border: 5px solid #ece3d2;
-    font-size: 30px;
+    font-size: 25px;
 }
 header .sticky_logo {
     display: none;
+}
+header .sticky .sticky_logo {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-top: -10px;
 }
 header.sticky {
     z-index: 999;
@@ -114,7 +131,7 @@ header.sticky {
     background: #313538;
     transition: 0.5s;
     top: 0;
-    padding: 10px 0 0 0;
+    padding: 30px 0 0 0;
 }
 header .sticky ul li a {
     color: white;
@@ -142,11 +159,11 @@ header .sticky ul li a {
         width: 100%;
         border-radius: 10px;
         text-align: center;
-        transition: 0.5s;
+        transition: 0.3s;
         z-index: 99;
     }
-    .nav-menu.active {
-        left: 0;
+    header .sticky .nav-menu {
+        top: 5rem;
     }
     header li {
         margin: 2.5rem 0;
@@ -157,7 +174,6 @@ header .sticky ul li a {
     .hamburger {
         display: block;
         cursor: pointer;
-        left: 50;
     }
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
@@ -169,4 +185,20 @@ header .sticky ul li a {
         transform: translateY(-8px) rotateY(-45deg);
     }
     
+}
+h1, h2, h3, h4, h5, h6 {
+    padding: 8px 0;
+}
+.services {
+    margin: 40px 0;
+}
+.service {
+    display: flex;
+    margin: 30px 0;
+}
+.service-icon {
+    flex: 30%;
+    align-self: flex-start;
+    font-size: 48px;
+    color: #252525;
 }
