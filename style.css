@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 :root{
-    --transition: all 0.7s ease;;
+    --transition: all 0.7s ease;
     --yellow: #f9d342;
     --dark: #292826;
 }
@@ -201,4 +201,56 @@ h1, h2, h3, h4, h5, h6 {
     align-self: flex-start;
     font-size: 48px;
     color: #252525;
+}
+.service-content {
+    padding-left: 20px;
+}
+.service-content h2 {
+    opacity: 0.7;
+}
+.service-content button {
+    margin-left: 0;
+    margin-right: 0;
+    background: var(--yellow);
+    color: #fff;
+}
+
+/* boooking form */
+.book {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
+    color: #fff;
+    padding: 40px 60px;
+}
+.book-form {
+    display: grid;
+}
+.form-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.book-form input[type = "submit"] {
+    margin: 18px 0 0 0;
+    background: var(--dark);
+    color: #fff;
+    border: 1px solid #fff;
+}
+.book-form label, .book-form input {
+    width: 100%;
+}
+.book-form label {
+    font-weight: 600;
+    word-spacing: 5px;
+    padding-bottom: 8px;
+}
+.book-form input:not(.btn) {
+    margin: 4px 0 16px 0;
+    padding: 12px 15px;
+    border-radius: 5px;
+    font-size: 17px;
+    border: none;
+}
+.book-form input:focus {
+    outline: 0;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
 }
